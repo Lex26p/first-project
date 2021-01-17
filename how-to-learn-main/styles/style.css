@@ -1,0 +1,378 @@
+﻿.redd{
+	border-width: 2px;
+	border-style: solid;
+	border-color: red;
+}
+
+
+
+.page {
+  min-width: 1100px;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.logo{          /* У верхнего и нижнего лого общая только ширина. */
+  width: 183px;
+}
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼header▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.header { 
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+
+.logo_place_header{
+  position: absolute;
+  height: 32px;
+  top: 30px;
+  left: 64px;
+}
+
+.header__square-pic{
+  position: absolute;
+  height: 568px;
+  width: 568px;
+  right: 0;
+  top: 64px;
+  background-color: #2f80ed;
+  z-index: -1;
+}
+
+.header__main-illustration{
+  position: absolute;
+  height: 608px;
+  width: 765px;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.header__title{
+  font-weight: bold;
+  margin: 0 0 0 64px;
+  width: 730px;
+  font-size: 102px;
+  line-height: 96px;
+  color: #000000;
+  padding: 0;
+}
+
+.header__subtitle{
+  position: absolute;
+  width: 388px;
+  height: auto;
+  bottom: 30px;
+  left: 64px;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+
+.header__link{  
+  color: #2f80ed;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__link:hover{ /* После первой проверки было замечание что неплохо было бы добавить эфект при наведении на ссылку. Так как не указали какой эфект, я установил подчеркивание. В брифе этого нет*/
+  text-decoration: underline;
+}
+/*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲header▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼description▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.description{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.two-columns{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.two-columns__brief{
+  font-weight: normal;
+  width: 175px;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #2f80ed;
+  padding: 0;
+  margin: 0;
+}
+
+.two-columns__main-text{
+  width: 80%;
+  min-width: 784px;
+  font-size: 24px;
+  line-height: 34px;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+
+.two-columns__paragraph{
+  margin: 0 0 30px 0;
+}
+
+.two-columns__paragraph:last-child {
+  margin: 0;
+}
+
+.two-columns__span-accent{
+  font-weight: bold;
+}
+/*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲description▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼digits▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.digits{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.section-title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 60px;
+  line-height: 1.15;
+  color: #000000;
+  padding: 0;
+  width: 60%;
+  margin: 0 auto 20px auto;
+}
+
+.section-subtitle{
+  font-size: 24px;
+  line-height: 34px;
+  color: #000000;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+.table{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+.table__cell{
+  width: 250px;
+  margin-top: 60px;
+}
+.table__heading{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.15;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+
+.table__text{
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000000;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+/*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲digits▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼feynman▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.feynman{
+  position: relative;
+  min-height: 790px;
+  background-color: #f2f2f2;
+  margin-top: 100px;
+  padding-top: 100px;
+}
+
+.feynman__image{
+  background-image: url(../images/feynman.png);
+  background-size: cover;
+  position: absolute;
+  height: 637px;
+  width: 876px;
+  left: 0;
+  bottom: 0;
+}
+
+.feynman__title{
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  font-size: 120px;
+  line-height: 1.15;
+  color: #000000;
+  width: 648px;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+.feynman__subtitle{
+  position: relative;
+  font-size: 36px;
+  line-height: 51px;
+  color: #000000;
+  text-align: center;
+  margin: 70px auto 0 auto;
+  padding: 0;
+}
+
+.feynman__link{
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  font-size: 36px;
+  line-height: 51px;
+  text-decoration: none;
+  color: #2f80ed;
+  padding: 0;
+  margin: 0;
+}
+
+.feynman__link:hover{ /* После первой проверки было замечание что неплохо было бы добавить эфект при наведении на ссылку. Так как не указали какой эфект, я установил подчеркивание. В брифе этого нет*/
+  text-decoration: underline;
+}
+/*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲feynman▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼kaufman▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.kaufman{
+  position: relative;
+  background-color: #1f1f1f;
+  overflow: hidden;
+  padding-bottom: 90px;
+  z-index: 1;
+}
+
+.kaufman__triangle{
+  position: absolute;
+  height: 877px;
+  width: 877px;
+  right: -210px;
+  top: 0;
+  z-index: -1;
+}
+
+.section-title_theme_dark{
+  margin-top: 90px;
+  color: #fff;
+}
+
+.section-subtitle_theme_dark{
+  color: #fff;
+}
+
+.table_theme_dark{
+	display: flex;
+  flex-wrap: wrap;
+}
+
+.table__cell_theme_dark{ 
+  width: 200px;
+  margin-top: 80px;
+}
+
+.table__heading_theme_dark{
+  color: #fff;
+}
+
+.table__text_theme_dark{
+  color: #fff;
+}
+
+/*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲kaufman▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+/*▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼footer▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼*/
+.footer{
+  box-sizing: border-box;
+  min-height: 350px;
+  padding: 60px 0 40px 0;
+  background-color: #1f1f1f;
+}
+
+.footer__columns{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+
+.footer__column_content_copyright{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 711px;
+  flex-direction: column;
+  min-height: 250px;
+}
+
+.logo_place_footer{
+  height: 35px;
+}
+
+.footer__author{
+  margin: 18px 0 18px 0;
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+  padding: 0;
+}
+/*.footer__column В коде провисываю как пустышку, по требованию брифа. После первой проверки написали что так здесь правильно. */
+
+/*.footer__column_content_info{ для этого блока у меня нет настроек Если в будущем будут, разкоментирую. */
+
+.footer__column_content_social{
+  list-style-type: none;
+}
+  
+.footer__column-heading{
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  padding: 0;
+}
+
+.footer__column-links{
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.footer__column-link{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__column-link:hover{ /* После первой проверки было замечание что неплохо было бы добавить эфект при наведении на ссылку. Так как не указали какой эфект, я установил подчеркивание. В брифе этого нет*/
+  text-decoration: underline;
+}
+
+.footer__social-icon{
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+}
+/*▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲footer▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
