@@ -1,6 +1,6 @@
 "use strict";
 
-let co2 = document.querySelector('.temp__value'); // co2
+let tempv = document.querySelector('.temp__value'); // co2
 let BtmAp = document.querySelector('.ap'); // Кнопка вверх
 let BtmDwn = document.querySelector('.dwn'); // Кнопка вниз
 let s1 = document.querySelector('.s1'); // Кнопка вниз
@@ -10,13 +10,14 @@ let on = document.querySelector('.on'); // Кнопка вниз
 let off = document.querySelector('.off'); // Кнопка вниз
 let inp = document.querySelector('.in'); // Кнопка вниз
 let inpLt = document.querySelector('.lt'); // Кнопка вниз
+let co2 = document.querySelector('.co2'); // Кнопка вниз
 
 BtmAp.addEventListener('click', OpenPopup);
 
 
 function OpenPopup() {
-  let num = co2.textContent;
-  co2.textContent = +num + 1;
+  let num = tempv.textContent;
+  tempv.textContent = +num + 1;
   
 }
 
@@ -24,8 +25,8 @@ BtmDwn.addEventListener('click', OpenPopup2);
 
 
 function OpenPopup2() {
-  let num = co2.textContent;
-  co2.textContent = +num - 1;
+  let num = tempv.textContent;
+  tempv.textContent = +num - 1;
   
 }
 
@@ -62,9 +63,14 @@ off.addEventListener('click', offf);
 
 
 function input() {
-  inpLt.textContent = inp.value;
+  inpLt.textContent = inp.value + "%";
 }
 
+// function co2in() {
+//   inpLt.textContent = inp.value;
+// }
+
+// setInterval();
 //inpLt.addEventListener('change', input);
 // function PopupSave (evt) {
 //   evt.preventDefault();
