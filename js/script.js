@@ -11,6 +11,42 @@ let off = document.querySelector('.off'); // Кнопка вниз
 let inp = document.querySelector('.in'); // Кнопка вниз
 let inpLt = document.querySelector('.lt'); // Кнопка вниз
 let co2 = document.querySelector('.co2'); // Кнопка вниз
+let inW1 = document.querySelector('.in-w1'); // Кнопка вниз
+let inW2 = document.querySelector('.in-w2'); // Кнопка вниз
+let inW3 = document.querySelector('.in-w3'); // Кнопка вниз
+
+
+
+let grd1 = 0;
+let grd2 = 0;
+let grd3 = 0;
+
+
+inW1.style.background = `linear-gradient(to right, #403e3e ${grd1}%, #403e3e 0%,  grey 0%)`;
+inW2.style.background = `linear-gradient(to right, #403e3e ${grd2}%, #403e3e 0%,  grey 0%)`;
+inW3.style.background = `linear-gradient(to right, #403e3e ${grd3}%, #403e3e 0%,  grey 0%)`;
+
+function grad1() {
+  let grd = inW1.value;
+  grd1 = grd;
+  inW1.style.background = `linear-gradient(to right, #403e3e ${grd1}%, #403e3e 0%,  grey 0%)`;
+}
+
+function grad2() {
+  let grd = inW2.value;
+  grd2 = grd;
+  inW2.style.background = `linear-gradient(to right, #403e3e ${grd2}%, #403e3e 0%,  grey 0%)`;
+}
+function grad3() {
+  let grd = inW3.value;
+  grd3 = grd;
+  inW3.style.background = `linear-gradient(to right, #403e3e ${grd3}%, #403e3e 0%,  grey 0%)`;
+}
+
+
+
+
+
 
 BtmAp.addEventListener('click', OpenPopup);
 
@@ -50,12 +86,12 @@ s2.addEventListener('click', btm2);
 s3.addEventListener('click', btm3);
 
 function onf() {
-  off.classList.remove('actf');
-  on.classList.add('actf');
+  off.classList.remove('act-off');
+  on.classList.add('act-on');
 }
 function offf() {
-  on.classList.remove('actf');
-  off.classList.add('actf');
+  on.classList.remove('act-on');
+  off.classList.add('act-off');
 }
 
 on.addEventListener('click', onf);
