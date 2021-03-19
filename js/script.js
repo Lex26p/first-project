@@ -14,12 +14,23 @@ let co2 = document.querySelector('.co2'); // Кнопка вниз
 let inW1 = document.querySelector('.in-w1'); // Кнопка вниз
 let inW2 = document.querySelector('.in-w2'); // Кнопка вниз
 let inW3 = document.querySelector('.in-w3'); // Кнопка вниз
-
+let paopap = document.querySelector('.paopap'); // раопап
+let paopapOpen = document.querySelector('.paopap__btm-open'); // открыть
+let paopapClos = document.querySelector('.paopap__btm-clos'); // закрыть
 
 
 let grd1 = 0;
 let grd2 = 0;
 let grd3 = 0;
+
+paopapOpen.addEventListener('click', () => {
+  paopap.classList.add('paopap_act');
+});
+
+paopapClos.addEventListener('click', () => {
+  paopap.classList.remove('paopap_act');
+});
+
 
 
 inW1.style.background = `linear-gradient(to right, #403e3e ${grd1}%, #403e3e 0%,  grey 0%)`;

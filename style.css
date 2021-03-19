@@ -5,10 +5,6 @@
   padding: 10px;
 }
 
-.content{
- 
-}
-
 .cont{
   margin-right: 50px;
 }
@@ -226,4 +222,69 @@ input{
     font-size: 24px;
     color: #DAA520;
     font-weight: 700;
+  }
+
+  .paopap{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(4, 7, 138, 0.7);
+  }
+.paopap_act{
+  display: flex;
+}
+
+  .paopap__content{
+    position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    min-height: 500px;
+    max-height: 90vh;
+    padding: 20px;
+    background-color:silver;
+  }
+
+  .paopap__text-h1{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+  }
+  .paopap__text{
+    font-size: 20px;
+  }
+
+  .paopap__btm-clos{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 50px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .paopap__btm-clos:active{
+    border: 3px solid blue;
+  }
+
+  .paopap__btm-open{
+    width: 100px;
+    height: 50px;
+    border: 2px solid #DAA520;
+    border-radius: 5px;
+    color: wheat;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .paopap__btm-open:active{
+    border: 3px solid #DAA520;
   }
