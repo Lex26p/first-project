@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.page{
+  max-width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  background-color: #000080;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.monitoring{
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.monitoring__title{
+  display: inline-block;
+  margin: 0;
+  width: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.monitoring__content{
+  font-size: 80px;
+  font-weight: 500;
+  color: 	#FFD700;
+}
+
+.fan-coil{
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 0 20px 20px 20px;
+}
+
+.fan-coil_title{
+  display: block;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.fan-coil__cont{
+  display: inline-block;
+  text-align: left;
+}
+
+.fan-coil__btm_cont{
+  margin-bottom: 40px;
+}
+
+.fan-coil__btm_title{
+  display: block;
+  margin-bottom: 10px;
+  max-width: 90px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.fan-coil__btm{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #DAA520;
+  border-radius: 50%;
+  cursor: pointer;
+}
+  
+.fan-coil__btm:active{
+  border: 3px solid #DAA520;
+}
+
+.fan-coil_html-power-on{
+  background-image: url('../images/on.svg');
+}
+
+.fan-coil_html-power-on_act{
+  background-image: url('../images/on-act.svg');
+}
+
+.fan-coil_html-power-off{
+  background-image: url('../images/off.svg');
+}
+
+.fan-coil_html-power-off_act{
+  background-image: url('../images/off-act.svg');
+}
+
+.fan-coil_html-fan-aut{
+  background-image: url('../images/aut.svg');
+}
+
+.fan-coil_html-fan-aut_act{
+  background-image: url('../images/aut-act.svg');
+}
+
+.fan-coil_html-fan-on{
+  background-image: url('../images/on.svg');
+}
+
+.fan-coil_html-fan-on_act{
+  background-image: url('../images/on-act.svg');
+}
+
+.fan-coil__value_cont{
+  position: relative;
+  margin:  50px 0 0 50px;
+  display: inline-block;
+  width: 50px;
+  height: 200px;
+}
+
+.fan-coil__speed-html-value{
+  position: absolute;
+  left: -14px;
+  top: -40px;
+  display: inline-block;
+  width: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: gold;
+}
+
+.fan-coil__speed-input {
+  position: absolute;
+  left: -76px;
+  top: 98px;
+  -webkit-appearance: none;
+  width: 200px;
+  border-radius: 8px;
+  height: 3px;
+  border: 1px solid gold;
+  transform: rotate(90deg);
+  outline: none;
+}
+
+.fan-coil__speed-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: green;
+  border: 1px solid #bdc3c7;
+  width: 20px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  }
+
+  .fan-coil__speed-input::-webkit-slider-thumb:active{
+    box-shadow: 0 0 20px gold;
+  }
+
+
+
+
+.set-temp{
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 0 20px 20px 20px;
+}
+
+.set-temp__title{
+  display: block;
+  margin: 0 0 30px 0;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.set-temp__input_cont{
+  margin-bottom: 30px;
+}
+
+.set-temp__input{
+  font-size: 50px;
+  font-weight: 500;
+  color: 	#FFD700;
+}
+
+.set-temp__num_title{
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.set-temp__btm_cont{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-right: 20px;
+  width: 200px;
+}
+
+.set-temp__btm_add{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/up.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.set-temp__btm_add:active{
+  border: 2px solid #0b065c;
+}
+
+.set-temp__btm_less{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/dwn.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.set-temp__btm_less:active{
+  border: 2px solid #0b065c;
+}
+
+.ventilation{
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 0 20px 20px 20px;
+}
+
+.ventilation_title{
+  display: block;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ventilation__cont{
+  display: inline-block;
+  text-align: left;
+}
+
+.ventilation__btm_cont{
+  margin-bottom: 40px;
+}
+
+.ventilation__btm_title{
+  display: block;
+  margin-bottom: 10px;
+  max-width: 90px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ventilation__btm{
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #DAA520;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ventilation__btm:active{
+  border: 3px solid #DAA520;
+}
+
+.ventilation_html-power-on{
+  background-image: url('../images/on.svg');
+}
+
+.ventilation_html-power-on_act{
+  background-image: url('../images/on-act.svg');
+}
+
+.ventilation_html-power-off{
+  background-image: url('../images/off.svg');
+}
+
+.ventilation_html-power-off_act{
+  background-image: url('../images/off-act.svg');
+}
+
+.ventilation__btm_name{
+  margin: auto;
+  font-size: 45px;
+  font-weight: bold;
+  color: gold;
+
+}
+
+.more-modes{
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 0 20px 20px 20px;
+}
+
+.more-modes_title{
+  display: block;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.more-modes__cont{
+  border: 1px solid red;
+}
+
+.more-modes__btm_cont{
+
+}
+
+.more-modes__btm{
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #DAA520;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.more-modes__btm:active{
+  border: 3px solid #DAA520;
+}
+
+.more-modes_html-vent-more-on{
+  background-image: url('../images/on.svg');
+}
+
+.more-modes_html-vent-more-on_act{
+  background-image: url('../images/on-act.svg');
+}
+
+.more-modes_html-vent-more-off{
+  background-image: url('../images/off.svg');
+}
+
+.more-modes_html-vent-more-off_act{
+  background-image: url('../images/off-act.svg');
+}
