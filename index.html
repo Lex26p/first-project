@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="7 Небо">
+    <meta name="author" content="Александр Переверзев">
+    <link rel = "stylesheet" href= "./css/normalize.css">
+    <link rel = "stylesheet" href= "./css/style.css">
+    <title>7 Небо</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <img src="./images/shape.svg" alt="лого" class="header__logo">
+      <h1 class="header__title"><span class="header__subtitle">Климат</span> 7 Небо</h1>
+      <div class="header__btm_info"><span class="header__btm_title">Инструкция</span></div>
+    </header>
+    <main class="content">
+      <section class="cont monitoring">
+        <div class="btn_info" data-info="0"><span class="btn_info_title">?</span></div>
+        <span class="title">Датчики</span>
+        <div>
+          <span class="monitoring__title">Темп.</span>
+          <span class="monitoring__content temp__html">22.6</span>
+          <span class="monitoring__title"><sup>o</sup>C</span>
+        </div>
+        <div>
+          <span class="monitoring__title">Влжн.</span>
+          <span class="monitoring__content rh__html">57</span>
+          <span class="monitoring__title">%</span>
+        </div>
+        <div>
+          <span class="monitoring__title">CO<sub>2</sub></span>
+          <span class="monitoring__content co2__html">675</span>
+          <span class="monitoring__title">ppm</span>
+        </div>
+      </section>
+
+
+
+
+      <section class="cont set-temp">
+        <div class="btn_info" data-info="1"><span class="btn_info_title" data-info="1">?</span></div>
+        <span class="title">Уставка температуры</span>
+        <div class="set-temp__cont">
+          <span class="set-temp__num_title"><span class="set-temp__input">24</span> <sup>o</sup>C</span>
+        </div>
+        <div class="set-temp__btm_cont">
+          <div class="btn" data-set="1"><span class="btn_title" data-set="1">-</span></div>
+          <div class="btn" data-set="2"><span class="btn_title" data-set="2">+</span></div>
+        </div>
+      </section>
+
+
+
+      <section class="cont curtains">
+        <div class="btn_info" data-info="2"><span class="btn_info_title" data-info="2">?</span></div>
+        <span class="title">Шторы</span>
+        <span class="lux-title">Яркость<span class="lux-num">12000</span>люкс</span>
+        <div class="more-modes__btm_cont curtains__btm_cont">
+          <span class="ventilation__btm_title">Режим</span>
+          <div class="btn" data-item="0"><span class="btn_title" data-item="0">Р</span></div>
+          <div class="btn" data-item="1"><span class="btn_title" data-item="1">А</span></div>
+        </div>
+        <!-- <div class="more-modes__btm_cont more-modes__btm_cont_curtains">
+          <div class="btn btn_more-modes btn_more-modes1" data-item="1" onclick = "void(0)"><span class="btn_title" data-item="1">&#8593;</span></div>
+          <div class="btn btn_more-modes btn_more-modes2" data-item="2" onclick = "void(0)"><span class="btn_title" data-item="2">&#8595;</span></div>
+        </div> -->
+        <div class="curtains__value_cont">
+          <span class="curtains__title curtains_value"></span>
+          <input  class="curtains__speed-input" type="range" min="0" max="100" value="0" name="range" step="10" onchange="curtainsSetVal()" oninput="curtainsSethtml()">
+        </div>
+      </section>
+
+
+
+      <section class="cont fan-coil">
+        <div class="btn_info" data-info="3"><span class="btn_info_title" data-info="3">?</span></div>
+        <span class="title">Фанкойлы</span>
+        <div class="fan-coil__cont">
+          <div class="fan-coil__btm_cont">
+            <span class="fan-coil__btm_title">Вкл/Выкл</span>
+            <div class="btn" data-item="1"><span class="btn_title" data-item="1">Р</span></div>
+            <div class="btn" data-item="2"><span class="btn_title" data-item="2">А</span></div>
+            <div class="btn" data-item="3"><span class="btn_title" data-item="3">&#9211;</span></div>
+          </div>
+          <span class="fan-coil__btm_title">Вкл/Выкл один фанкойл</span>
+          <div class="fan-coil__act_cont">
+            <div class="fan-coil__act"><span class="fan-coil__act_title">1</span></div>
+            <div class="fan-coil__act"><span class="fan-coil__act_title">2</span></div>
+            <div class="fan-coil__act"><span class="fan-coil__act_title">3</span></div>
+            <div class="fan-coil__act"><span class="fan-coil__act_title">4</span></div>
+            <div class="fan-coil__act"><span class="fan-coil__act_title">5</span></div>
+            <div class="fan-coil__act"><span class="fan-coil__act_title">6</span></div>
+            <div class="fan-coil__act"><span class="fan-coil__act_title">7</span></div>
+            <div class="fan-coil__act"><span class="fan-coil__act_title">8</span></div>
+          </div>
+        </div>
+          <div class="fan-coil__value_cont">
+            <span class="fan-coil__value_titl">Скорость</span>
+            <span class="value__title fan-coil_value"></span>
+            <input  class="fan-coil__speed-input" type="range" min="0" max="100" value="0" name="range" step="1" onchange="fanSpeedSet()" oninput="fanSpeedSethtml()">
+          </div>
+      </section>
+
+      
+
+      <section class="cont ventilation">
+        <div class="btn_info" data-info="4"><span class="btn_info_title" data-info="4">?</span></div>
+        <span class="title">Вентиляция</span>
+        <span class="ventilation__status_title">Статус</span>
+        <span class="ventilation_status">Запуск</span>
+          <div class="ventilation__btm_cont ventilation__btm_cont-on-Off">
+            <span class="ventilation__btm_title">Вкл/Выкл</span>
+            <div class="btn ventilation_fan-1" data-num="1" data-info="btn_act-green"><span class="btn_title" data-num="1">1</span></div>
+            <div class="btn ventilation_fan-2" data-num="2" data-info="btn_act-green"><span class="btn_title" data-num="2">2</span></div>
+            <div class="btn ventilation_fan-3" data-num="3" data-info="btn_act-green"><span class="btn_title" data-num="3">3</span></div>
+            <div class="btn ventilation_power-off" data-num="4" data-info="btn_act-red"><span class="btn_title" data-num="4">&#9211;</span></div>
+          </div>
+          
+      </section>
+
+
+
+      <section class="cont more-modes">
+        <div class="btn_info" data-info="5"><span class="btn_info_title" data-info="5">?</span></div>
+        <span class="title">Проветривание</span>
+          <div class="more-modes__btm_cont more-modes__on-Off_cont">
+            <span class="ventilation__btm_title">Вкл/Выкл</span>
+            <div class="btn more-modes_on" data-num="1" data-info="btn_act-green"><span class="btn_title" data-num="1">|</span></div>
+            <div class="btn more-modes_off" data-num="0" data-info="btn_act-red"><span class="btn_title" data-num="0">&#9211;</span></div>
+          </div>
+          <div class="more-modes__btm_cont-time">
+            <div class="btn" data-info="300"><span class="btn_title">-</span></div>
+            <div class="more-modes_time-cont">
+              <span class="more-modes_time">10</span>
+              <span class="more-modes_time_title">мин</span>
+            </div>
+            <div class="btn"><span class="btn_title">+</span></div>
+          </div>
+      </section>
+    </main>
+    <section class="popap popap__info">
+      <div class="popap__content">
+        <h2 class="popap__title">Инструкция</h2>
+        <div class="popap__close popap__close_info" data-num="1" data-info="btn_act-green"><span class="popap__close_title">X</span></div>
+        <div class="popap__content__text">
+         
+            
+            <h2 class="popap__subtitle">Датчики</h2>
+            <div class="popap__info_item">
+              <img class="fit-picture" src="./images/Temp.png" alt="1">
+              <span class="popap__text">Температура</span>
+            </div>
+            <div class="popap__info_item">
+              <img class="fit-picture" src="./images/RH.png" alt="1">
+              <span class="popap__text">Влажность</span>
+            </div>
+            <div class="popap__info_item">
+              <img class="fit-picture" src="./images/CO2.png" alt="1">
+              <span class="popap__text">Уровень СО2</span>
+            </div>
+            
+            
+            <h2 class="popap__subtitle">Уставка температуры</h2>
+            <span class="popap__text">Уставка температуры общая для вентиляции и фанкойлов.</span>
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">+</span></div>
+              <span class="popap__text">Увеличить уставку температуры</span>
+            </div>
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">-</span></div>
+              <span class="popap__text">Уменьшить уставку температуры</span>
+            </div>
+            <h2 class="popap__subtitle">Шторы</h2>
+            
+            
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">&#8593;</span></div>
+              <span class="popap__text">Поднять шторы (нажать и удерживать).</span>
+            </div>
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">&#8595;</span></div>
+              <span class="popap__text">Опустить шторы (нажать и удерживать).</span>
+            </div>
+            <h2 class="popap__subtitle">Фанкоилы</h2>
+            
+
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">Р</span></div>
+              <span class="popap__text">Ручной режим. Скорость вентиляторов фиксирования, устанавливается ползунком. При достижении необходимой температуры – вентиляторы будут отключатся.</span>
+            </div>
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">А</span></div>
+              <span class="popap__text">Автоматический режим. Скорость вентиляторов регулируется автоматически. Ползунком устанавливается максимальная скорость.</span>
+            </div>
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">&#9211;</span></div>
+              <span class="popap__text">Выключить все фанкойлы.</span>
+            </div>
+            <div class="popap__info_item">
+              <img class="fit-picture" src="./images/plz.png" alt="1">
+              <span class="popap__text">Ползунком устанавливается скорость вентилятора фанкойлов.  Зеленая полоска ползунка указывает на фактическую скорость.</span>
+            </div>
+            <div class="popap__info_item">
+              <img class="fit-picture" src="./images/InfoFan.png" alt="1">
+              <span class="popap__text">Индикаторы фанкойлов. Показывают какие фанкойлы отключены. Если нажать на них, откроется карта, где можно отключить и включить фанкойлы по отдельности.</span>
+            </div>
+            
+            
+            <h2 class="popap__subtitle">Вентиляция</h2>
+            <div class="popap__info_item">
+              <img class="fit-picture" src="./images/StatusVent.png" alt="1">
+              <span class="popap__text">Фактический режим работы вент машины.</span>
+            </div>
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">1</span></div>
+              <div class="btn btn_picture"><span class="btn_title">2</span></div>
+              <div class="btn btn_picture"><span class="btn_title">3</span></div>
+              <span class="popap__text">Выбор производительности. Низкая скорость, средняя скорость, максимальная скорость.</span>
+            </div>
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">&#9211;</span></div>
+              <span class="popap__text">Выключить вентиляцию.</span>
+            </div>
+
+            
+            <h2 class="popap__subtitle">Проветривание</h2>
+            <div class="popap__info_item">
+              <div class="btn btn_picture"><span class="btn_title">|</span></div>
+              <div class="btn btn_picture"><span class="btn_title">&#9211;</span></div>
+              <span class="popap__text">Включить/выключить проветривание. При включении режима проветривания – вент машина и фанкойлы включаются на максимальную скорость. Когда закончится установленное время, все вернется в прежний режим.</span>
+            </div>
+            <div class="popap__info_item">
+              <span class="popap__text">Установка таймера в минутах. Появляется после включения режима проветривания.</span>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+    <section class="popap popap__fan-coil">
+      <div class="popap__content">
+        <div class="popap__close popap__close_fan-coil" data-num="1" data-info="btn_act-green"><span class="popap__close_title">X</span></div>
+        <h2 class="popap__title">Положение фанкойлов</h2>
+        <ul class="fan-coil__popap_list">
+          <li class="fan-coil__popap_item fan-coil__popap_item-F1">
+            <div class="fan-coil__name fan-coil__name_act-off" data-item="fan-coil__name_act-on" data-item2="F-1"><span style="pointer-events: none" class="fan-coil__act_on_title" data-item="1" data-item2="F-1">F-1</span></div>
+          </li>
+          <li class="fan-coil__popap_item fan-coil__popap_item-F2">
+            <div class="fan-coil__name fan-coil__name_act-off" data-item="fan-coil__name_act-on" data-item2="F-2"><span style="pointer-events: none" class="fan-coil__act_on_title" data-item="1" data-item2="F-2">F-2</span></div>
+          </li>
+          <li class="fan-coil__popap_item">
+            <div class="fan-coil__name fan-coil__name_act-off" data-item="fan-coil__name_act-on" data-item2="F-3"><span style="pointer-events: none" class="fan-coil__act_on_title" data-item="1" data-item2="F-3">F-3</span></div>
+          </li>
+          <li class="fan-coil__popap_item">
+            <div class="fan-coil__name fan-coil__name_act-off" data-item="fan-coil__name_act-on" data-item2="F-4"><span style="pointer-events: none" class="fan-coil__act_on_title" data-item="1" data-item2="F-4">F-4</span></div>
+          </li>
+          <li class="fan-coil__popap_item">
+            <div class="fan-coil__name fan-coil__name_act-off" data-item="fan-coil__name_act-on" data-item2="F-5"><span style="pointer-events: none" class="fan-coil__act_on_title" data-item="1" data-item2="F-5">F-5</span></div>
+          </li>
+          <li class="fan-coil__popap_item">
+            <div class="fan-coil__name fan-coil__name_act-off" data-item="fan-coil__name_act-on" data-item2="F-6"><span style="pointer-events: none" class="fan-coil__act_on_title" data-item="1" data-item2="F-6">F-6</span></div>
+          </li>
+          <li class="fan-coil__popap_item">
+            <div class="fan-coil__name fan-coil__name_act-off" data-item="fan-coil__name_act-on" data-item2="F-7"><span style="pointer-events: none" class="fan-coil__act_on_title" data-item="1" data-item2="F-7">F-7</span></div>
+          </li>
+          <li class="fan-coil__popap_item">
+            <div class="fan-coil__name fan-coil__name_act-off" data-item="fan-coil__name_act-on" data-item2="F-8"><span style="pointer-events: none" class="fan-coil__act_on_title" data-item="1" data-item2="F-8">F-8</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="popap popap__alert">
+      <div class="popap__content_alert">
+        <div class="popap__close popap__close_alert" data-num="1" data-info="btn_act-green"><span class="popap__close_title">X</span></div>
+        <span class="popap__alert_text">Сначало необходимо включить вентиляцию.</span>
+      </div>
+    </section>
+
+    <section class="popap popap__error">
+      <div class="popap__content_error">
+        <span class="error_text"></span>
+      </div>
+    </section>
+    <script src="./js/browserMqtt.js"></script>   
+    <script src="./js/script.js"></script>
+  </body>
+</html>
